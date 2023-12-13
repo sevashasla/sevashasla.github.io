@@ -1,4 +1,24 @@
 title: <p align="center"> Vsevolod Skorokhodov </p>
 logo: "/images/me.png?raw=true"
+
+description:
+  <p align="center">
+  Moscow, Russia
+  <br> (+7) 9255254801
+  <br> vsevolodskoro@gmail.com | sevashasla@yandex.ru
+  <br> <a href="pdf/resume_eng.pdf">Resume</a> |
+  
+  <a href="https://github.com/sevashasla">GitHub</a>
+  <a href="https://t.me/sevashasla">Telegram</a>
+  </p>
+  
+  <p align="justify">
+  <br>
+  I'm in my senior year of Bachelor at the Moscow Institute of Physics and Technology (MIPT)
+  <br><br>
+  I am deeply passionate about computer vision/3D reconstruction/graphics
+  
+  </p>
+
 show_downloads: false
 theme: jekyll-theme-minimal
