@@ -127,11 +127,13 @@ h3 {
   object-fit: contain;
 }
 
-.has-video {
+.has-video,
+.has-image-swap {
   position: relative;
 }
 
-.publication-video {
+.publication-video,
+.publication-hover-image {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -140,6 +142,11 @@ h3 {
 }
 
 .has-video.is-playing .publication-video {
+  opacity: 1;
+}
+
+.has-image-swap:hover .publication-hover-image,
+.has-image-swap:focus .publication-hover-image {
   opacity: 1;
 }
 
