@@ -145,8 +145,8 @@ h3 {
   opacity: 1;
 }
 
-.has-image-swap:hover .publication-hover-image,
-.has-image-swap:focus .publication-hover-image {
+.publication:hover .has-image-swap .publication-hover-image,
+.publication:focus-within .has-image-swap .publication-hover-image {
   opacity: 1;
 }
 

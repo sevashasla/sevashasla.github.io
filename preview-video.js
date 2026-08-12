@@ -2,6 +2,7 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 document.querySelectorAll('.publication-image.has-video').forEach((preview) => {
   const video = preview.querySelector('.publication-video');
+  const project = preview.closest('.publication');
   let pointerInside = false;
   let focused = false;
 
@@ -27,21 +28,23 @@ document.querySelectorAll('.publication-image.has-video').forEach((preview) => {
     video.currentTime = 0;
   };
 
-  preview.addEventListener('pointerenter', () => {
+  project.addEventListener('pointerenter', () => {
     pointerInside = true;
     play();
   });
-  preview.addEventListener('pointerleave', () => {
+  project.addEventListener('pointerleave', () => {
     pointerInside = false;
     if (!focused) stop();
   });
-  preview.addEventListener('focus', () => {
+  project.addEventListener('focusin', () => {
     focused = true;
     play();
   });
-  preview.addEventListener('blur', () => {
-    focused = false;
-    if (!pointerInside) stop();
+  project.addEventListener('focusout', (event) => {
+    if (!project.contains(event.relatedTarget)) {
+      focused = false;
+      if (!pointerInside) stop();
+    }
   });
   reducedMotion.addEventListener('change', ({ matches }) => {
     if (matches) stop();
